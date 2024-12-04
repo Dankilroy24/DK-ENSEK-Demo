@@ -4,6 +4,8 @@ This is open source and writes tests for a open api defination which can then be
 Linked is the portman repo:
 https://github.com/apideck-libraries/portman
 
+To run the portman collection navigate to DK-ENSEK-Demo/api-specifaction and run portman -c portman-config.json -l swagger.json
+
 The github action will run either by manually been triggered or on a merge to main. Currently due to the defect with the orderids not accepting a order id it wont complete so as you can see the tests currently fail in the github action. This could be implemented as part of the build pipeline so if this was the fail the whole pipeline would fail ensuring a releae would not go out.
 
 To easily see the test which i have produced via portman you can use the postman folder to import into Postman for a cleaner view.
