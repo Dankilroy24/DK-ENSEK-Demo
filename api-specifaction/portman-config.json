@@ -1,0 +1,37 @@
+{
+  "version": 1.0,
+  "overwrites": [
+    {
+      "overwriteRequestBaseUrl": {
+        "value": "https://qacandidatetest.ensek.io/"
+      }
+    }
+  ],
+  "tests": {
+    "contractTests": [
+      {
+        "openApiOperation": "*::*",
+        "statusCode": {
+          "enabled": true
+        },
+        "responseTime": {
+          "enabled": true,
+          "maxMs": 2000
+        },
+        "contentType": {
+          "enabled": true
+        },
+        "jsonBody": {
+          "enabled": true
+        },
+        "schemaValidation": {
+          "enabled": true,
+          "additionalProperties": false
+        },
+        "headersPresent": {
+          "enabled": true
+        }
+      }
+    ]
+  }
+}

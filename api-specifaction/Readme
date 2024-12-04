@@ -1,0 +1,2 @@
+There are two ways to approach stage 3, the way i would do it normally would be using a tool called Portman
+This is open source and writes tests for a open api defination which can then be run in postman and automated via a github action or some other ci/cd pipeline option and it can run against the deployment pipeline.

@@ -1,0 +1,234 @@
+{
+  "swagger": "2.0",
+  "basePath": "/",
+  "paths": {
+    "/ENSEK/buy/{id}/{quantity}": {
+      "put": {
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        },
+        "description": "Use to purchase energy units.",
+        "operationId": "put_buy",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "description": "Energy type identifier."
+          },
+          {
+            "name": "quantity",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "description": "Quantity to purchase."
+          }
+        ],
+        "tags": ["ENSEK"]
+      }
+    },
+    "/ENSEK/energy": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        },
+        "description": "Use to obtain details on energy types.",
+        "operationId": "get_energy",
+        "tags": ["ENSEK"]
+      }
+    },
+    "/ENSEK/login": {
+      "post": {
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "description": "Use to obtain an Bearer access token.",
+        "operationId": "post_login",
+        "parameters": [
+          {
+            "name": "payload",
+            "required": true,
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/loginResource"
+            }
+          }
+        ],
+        "tags": ["ENSEK"]
+      }
+    },
+    "/ENSEK/orders": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        },
+        "description": "Use to obtain details of previous orders.",
+        "operationId": "get_orders",
+        "tags": ["ENSEK"]
+      }
+    },
+    "/ENSEK/orders/{orderId}": {
+      "delete": {
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        },
+        "operationId": "delete_orders",
+        "parameters": [
+          {
+            "name": "orderId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": ["ENSEK"]
+      },
+      "put": {
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        },
+        "operationId": "put_orders",
+        "parameters": [
+          {
+            "name": "payload",
+            "required": true,
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/orderResource"
+            }
+          },
+          {
+            "name": "orderId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": ["ENSEK"]
+      },
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        },
+        "description": "Use to obtain details of a single previous order.",
+        "operationId": "get_orders",
+        "parameters": [
+          {
+            "name": "orderId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "Order id"
+          }
+        ],
+        "tags": ["ENSEK"]
+      }
+    },
+    "/ENSEK/reset": {
+      "post": {
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "description": "Use to reset the test data back to its initial state",
+        "operationId": "post_reset",
+        "tags": ["ENSEK"]
+      }
+    }
+  },
+  "info": {
+    "title": "ENSEK Test API Application",
+    "version": "5.0",
+    "description": "Purchase Application"
+  },
+  "produces": ["application/json"],
+  "consumes": ["application/json"],
+  "securityDefinitions": {
+    "Bearer Auth": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization",
+      "description": "**Enter *'Bearer '* followed by a valid token**, e.g., 'Bearer eyJ0eXAiOiJ'",
+      "value": "Bearer "
+    }
+  },
+  "security": [
+    {
+      "Bearer Auth": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "ENSEK",
+      "description": "ENSEK Test API Application"
+    }
+  ],
+  "definitions": {
+    "loginResource": {
+      "required": ["password", "username"],
+      "properties": {
+        "username": {
+          "type": "string",
+          "example": "test"
+        },
+        "password": {
+          "type": "string",
+          "example": "testing"
+        }
+      },
+      "type": "object"
+    },
+    "orderResource": {
+      "properties": {
+        "id": {
+          "type": "string",
+          "default": ""
+        },
+        "quantity": {
+          "type": "integer",
+          "default": 0
+        },
+        "energy_id": {
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "responses": {
+    "ParseError": {
+      "description": "When a mask can't be parsed"
+    },
+    "MaskError": {
+      "description": "When any error occurs on mask"
+    }
+  }
+}
