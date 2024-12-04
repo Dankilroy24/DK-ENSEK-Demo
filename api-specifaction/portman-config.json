@@ -174,7 +174,7 @@
                   "responseBodyTests": [
                     {
                       "key": "message",
-                      "value": "There is no nuclear fuel to purchase"
+                      "value": "There is no nuclear fuel to purchase!"
                     }
                   ]
                 }
