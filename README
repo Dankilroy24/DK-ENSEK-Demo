@@ -1,0 +1,1 @@
+For the automation part of this test, i have created a postman collection which can be run as part of a ci/cd pipeline by using the postman cli.

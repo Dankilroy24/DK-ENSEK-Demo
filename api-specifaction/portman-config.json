@@ -5,8 +5,62 @@
       "overwriteRequestBaseUrl": {
         "value": "https://qacandidatetest.ensek.io/"
       }
+    },
+    {
+      "openApiOperation": "*::/*",
+      "overwriteRequestSecurity": {
+        "bearer": {
+          "token": "{{apiKey}}"
+        }
+      }
+    },
+    {
+      "openApiOperationId": "post_reset",
+      "overwriteRequestSecurity": {
+        "bearer": {
+          "token": "{{LoginToken}}"
+        }
+      }
+    },
+    {
+      "openApiOperationId": "put_buy",
+      "overwriteRequestPathVariables": [
+        {
+          "key": "id",
+          "value": "3",
+          "overwrite": true
+        },
+        {
+          "key": "quantity",
+          "value": "100",
+          "overwrite": true
+        }
+      ]
+    },
+    {
+      "openApiOperationId": "post_login",
+      "overwriteRequestBody": [
+        {
+          "key": "username",
+          "value": "{{username}}",
+          "overwrite": true
+        },
+        {
+          "key": "password",
+          "value": "{{password}}",
+          "overwrite": true
+        }
+      ]
     }
   ],
+  "globals": {
+    "orderOfOperations": [
+      "POST::/ENSEK/login",
+      "POST::/ENSEK/reset",
+      "GET::/ENSEK/energy",
+      "PUT::/ENSEK/buy"
+    ]
+  },
   "tests": {
     "contractTests": [
       {
@@ -32,6 +86,193 @@
           "enabled": true
         }
       }
+    ],
+    "contentTests": [
+      {
+        "openApiOperationId": "put_buy",
+        "responseBodyTests": [
+          {
+            "key": "message",
+            "value": "You have purchased 100 kWh at a cost of 47.0 there are 4222 units remaining"
+          }
+        ]
+      }
+    ],
+    "extendTests": [],
+    "variationTests": [
+      {
+        "openApiOperationId": "put_buy",
+        "openApiResponse": "200",
+        "variations": [
+          {
+            "name": "200: Buy gas",
+            "overwrites": [
+              {
+                "overwriteRequestPathVariables": [
+                  {
+                    "key": "id",
+                    "value": "1",
+                    "overwrite": true
+                  },
+                  {
+                    "key": "quantity",
+                    "value": "100",
+                    "overwrite": true
+                  }
+                ]
+              }
+            ],
+            "tests": {
+              "contractTests": [
+                {
+                  "statusCode": {
+                    "enabled": true
+                  },
+                  "schemaValidation": {
+                    "enabled": true,
+                    "additionalProperties": false
+                  },
+                  "contentType": {
+                    "enabled": true
+                  }
+                }
+              ],
+              "contentTests": [
+                {
+                  "openApiOperationId": "put_buy",
+                  "responseBodyTests": [
+                    {
+                      "key": "message",
+                      "value": "You have purchased 2900 m³ at a cost of 34.0 there are 100 units remaining."
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "name": "200: Buy nuclear",
+            "overwrites": [
+              {
+                "overwriteRequestPathVariables": [
+                  {
+                    "key": "id",
+                    "value": "2",
+                    "overwrite": true
+                  },
+                  {
+                    "key": "quantity",
+                    "value": "100",
+                    "overwrite": true
+                  }
+                ]
+              }
+            ],
+            "tests": {
+              "contractTests": [
+                {
+                  "statusCode": {
+                    "enabled": true
+                  },
+                  "schemaValidation": {
+                    "enabled": true,
+                    "additionalProperties": false
+                  },
+                  "contentType": {
+                    "enabled": true
+                  }
+                }
+              ],
+              "contentTests": [
+                {
+                  "openApiOperationId": "put_buy",
+                  "responseBodyTests": [
+                    {
+                      "key": "message",
+                      "value": "There is no nuclear fuel to purchase"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "name": "200: Buy oil",
+            "overwrites": [
+              {
+                "overwriteRequestPathVariables": [
+                  {
+                    "key": "id",
+                    "value": "4",
+                    "overwrite": true
+                  },
+                  {
+                    "key": "quantity",
+                    "value": "100",
+                    "overwrite": true
+                  }
+                ]
+              }
+            ],
+            "tests": {
+              "contractTests": [
+                {
+                  "statusCode": {
+                    "enabled": true
+                  },
+                  "schemaValidation": {
+                    "enabled": true,
+                    "additionalProperties": false
+                  },
+                  "contentType": {
+                    "enabled": true
+                  }
+                }
+              ],
+              "contentTests": [
+                {
+                  "openApiOperationId": "put_buy",
+                  "responseBodyTests": [
+                    {
+                      "key": "message",
+                      "value": "You have purchased 100 Litres at a cost of 60.0 there are -80 units remaining. Your orderid is .*",
+                      "useRegex": true
+                    }
+                  ]
+                }
+              ],
+              "assignVariables": {
+                "collectionVariables": [
+                  {
+                    "key": "message",
+                    "value": "{{BuyOilSummary}}"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
     ]
-  }
+  },
+  "assignVariables": [
+    {
+      "openApiOperationId": "post_login",
+      "collectionVariables": [
+        {
+          "responseBodyProp": "access_token",
+          "name": "LoginToken"
+        }
+      ]
+    },
+    {
+      "openApiOperationId": "get_energy",
+      "collectionVariables": [
+        {
+          "responseBodyProp": "electric.energy_id",
+          "name": "electricEnergyId"
+        }
+      ]
+    }
+  ]
 }
