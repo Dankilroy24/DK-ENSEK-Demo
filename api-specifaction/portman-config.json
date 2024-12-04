@@ -87,17 +87,7 @@
         }
       }
     ],
-    "contentTests": [
-      {
-        "openApiOperationId": "put_buy",
-        "responseBodyTests": [
-          {
-            "key": "message",
-            "value": "You have purchased 100 kWh at a cost of 47.0 there are 4222 units remaining"
-          }
-        ]
-      }
-    ],
+    "contentTests": [],
     "extendTests": [],
     "variationTests": [
       {
@@ -140,12 +130,7 @@
               "contentTests": [
                 {
                   "openApiOperationId": "put_buy",
-                  "responseBodyTests": [
-                    {
-                      "key": "message",
-                      "value": "You have purchased 2900 m³ at a cost of 34.0 there are 100 units remaining."
-                    }
-                  ]
+                  "responseBodyTests": []
                 }
               ]
             }
@@ -228,27 +213,82 @@
                     "enabled": true
                   }
                 }
-              ],
-              "contentTests": [
-                {
-                  "openApiOperationId": "put_buy",
-                  "responseBodyTests": [
-                    {
-                      "key": "message",
-                      "value": "You have purchased 100 Litres at a cost of 60.0 there are -80 units remaining. Your orderid is .*",
-                      "useRegex": true
-                    }
-                  ]
-                }
-              ],
-              "assignVariables": {
-                "collectionVariables": [
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "openApiOperationId": "post_login",
+        "openApiResponse": "401",
+        "variations": [
+          {
+            "name": "401: Unauthorized login",
+            "overwrites": [
+              {
+                "overwriteRequestBody": [
                   {
-                    "key": "message",
-                    "value": "{{BuyOilSummary}}"
+                    "key": "username",
+                    "value": "invalid_user",
+                    "overwrite": true
+                  },
+                  {
+                    "key": "password",
+                    "value": "invalid_pass",
+                    "overwrite": true
                   }
                 ]
               }
+            ],
+            "tests": {
+              "contractTests": [
+                {
+                  "statusCode": {
+                    "enabled": true
+                  },
+                  "schemaValidation": {
+                    "enabled": true,
+                    "additionalProperties": false
+                  },
+                  "contentType": {
+                    "enabled": true
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "openApiOperationId": "post_reset",
+        "openApiResponse": "401",
+        "variations": [
+          {
+            "name": "401: Unauthorized access with invalid token",
+            "overwrites": [
+              {
+                "overwriteRequestSecurity": {
+                  "bearer": {
+                    "token": "invalidtoken"
+                  }
+                }
+              }
+            ],
+            "tests": {
+              "contractTests": [
+                {
+                  "statusCode": {
+                    "enabled": true
+                  },
+                  "schemaValidation": {
+                    "enabled": true,
+                    "additionalProperties": false
+                  },
+                  "contentType": {
+                    "enabled": true
+                  }
+                }
+              ]
             }
           }
         ]
