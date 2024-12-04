@@ -51,6 +51,16 @@
           "overwrite": true
         }
       ]
+    },
+    {
+      "openApiOperation": "*::/ENSEK/orders/*",
+      "overwriteRequestPathVariables": [
+        {
+          "key": "orderId",
+          "value": "{{OrderId}}",
+          "overwrite": true
+        }
+      ]
     }
   ],
   "globals": {
@@ -311,6 +321,15 @@
         {
           "responseBodyProp": "electric.energy_id",
           "name": "electricEnergyId"
+        }
+      ]
+    },
+    {
+      "openApiOperationId": "get_orders",
+      "collectionVariables": [
+        {
+          "responseBodyProp": "[0].Id",
+          "name": "OrderId"
         }
       ]
     }
