@@ -10,13 +10,13 @@
     },
     {
       "key": "apiKey",
-      "value": "",
+      "value": "eyJ0eXAiOiJ",
       "type": "default",
       "enabled": true
     },
     {
       "key": "password",
-      "value": "",
+      "value": "testing",
       "type": "default",
       "enabled": true
     },
