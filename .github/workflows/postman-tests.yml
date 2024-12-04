@@ -29,9 +29,11 @@ jobs:
         continue-on-error: true
 
       - name: Generate HTML Report
+        if: always()
         run: newman run postman/collection.json --environment postman/environment.json --reporters cli,html --reporter-html-export newman/report.html
 
       - name: Upload HTML Report
+        if: always() # Ensure this step runs regardless of the previous step's success
         uses: actions/upload-artifact@v3
         with:
           name: postman-report
