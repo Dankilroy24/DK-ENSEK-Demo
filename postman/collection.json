@@ -1,10 +1,10 @@
 {
   "_": {
-    "postman_id": "0ee4fb38-81e8-41dd-9957-e79f2142df92"
+    "postman_id": "bd44a294-601a-43f1-925b-ec0262062539"
   },
   "item": [
     {
-      "id": "244ac8db-a22b-410c-9fc8-4debd9d9aae0",
+      "id": "e144c679-e1a2-4647-92e3-7b80f73112fc",
       "name": "ENSEK",
       "description": {
         "content": "ENSEK Test API Application",
@@ -12,7 +12,7 @@
       },
       "item": [
         {
-          "id": "7197f357-e280-4bd5-a7f8-19c1d53ecce4",
+          "id": "0e9ca1cc-f876-4461-8d6c-0ffbd187bc86",
           "name": "post login",
           "request": {
             "name": "post login",
@@ -21,13 +21,8 @@
               "type": "text/plain"
             },
             "url": {
-              "path": [
-                "ENSEK",
-                "login"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
+              "path": ["ENSEK", "login"],
+              "host": ["{{baseUrl}}"],
               "query": [],
               "variable": []
             },
@@ -61,17 +56,12 @@
           },
           "response": [
             {
-              "id": "61f5a462-696c-4b8e-af5b-37a160f3bba4",
+              "id": "4270e6f8-75ca-4c48-9728-8037bf9ebfe1",
               "name": "Success",
               "originalRequest": {
                 "url": {
-                  "path": [
-                    "ENSEK",
-                    "login"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
+                  "path": ["ENSEK", "login"],
+                  "host": ["{{baseUrl}}"],
                   "query": [],
                   "variable": []
                 },
@@ -107,17 +97,12 @@
               "cookie": []
             },
             {
-              "id": "5798830c-f8b6-49e5-b61b-72c0619aa666",
+              "id": "a3615f30-295a-4de5-9201-d748df859d3c",
               "name": "Bad Request",
               "originalRequest": {
                 "url": {
-                  "path": [
-                    "ENSEK",
-                    "login"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
+                  "path": ["ENSEK", "login"],
+                  "host": ["{{baseUrl}}"],
                   "query": [],
                   "variable": []
                 },
@@ -153,17 +138,12 @@
               "cookie": []
             },
             {
-              "id": "5ee790a3-6626-4c8f-a084-7984e200041c",
+              "id": "1232dcc3-d68d-4f4a-a055-268fcdda0991",
               "name": "Unauthorized",
               "originalRequest": {
                 "url": {
-                  "path": [
-                    "ENSEK",
-                    "login"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
+                  "path": ["ENSEK", "login"],
+                  "host": ["{{baseUrl}}"],
                   "query": [],
                   "variable": []
                 },
@@ -203,7 +183,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "07fbd768-f0f5-4f7c-8f8d-cda349cbade4",
+                "id": "8a0a773d-1c8c-4c99-b78a-627a2ac84be2",
                 "type": "text/javascript",
                 "exec": [
                   "// Validate response status code \npm.test(\"[POST]::/ENSEK/login - Response status code is 200\", function () {\n    pm.expect(pm.response.code).to.equal(200);\n});\n",
@@ -220,7 +200,7 @@
           }
         },
         {
-          "id": "b95fcca3-e4a4-4bca-b459-618702a75c1e",
+          "id": "af95379d-10a0-4384-9008-c4615981b2a9",
           "name": "post reset",
           "request": {
             "name": "post reset",
@@ -229,13 +209,8 @@
               "type": "text/plain"
             },
             "url": {
-              "path": [
-                "ENSEK",
-                "reset"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
+              "path": ["ENSEK", "reset"],
+              "host": ["{{baseUrl}}"],
               "query": [],
               "variable": []
             },
@@ -254,17 +229,12 @@
           },
           "response": [
             {
-              "id": "44d19002-f305-4b97-be95-fd0574dea4b7",
+              "id": "d94e45e8-05a7-42a3-8aeb-757ffbc9a5da",
               "name": "Success",
               "originalRequest": {
                 "url": {
-                  "path": [
-                    "ENSEK",
-                    "reset"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
+                  "path": ["ENSEK", "reset"],
+                  "host": ["{{baseUrl}}"],
                   "query": [],
                   "variable": []
                 },
@@ -287,17 +257,12 @@
               "cookie": []
             },
             {
-              "id": "e513a5e7-7222-4877-bb75-3ecdee245ff9",
+              "id": "40c363b2-aedb-4ea3-ae50-38ffc0eef5db",
               "name": "Unauthorized",
               "originalRequest": {
                 "url": {
-                  "path": [
-                    "ENSEK",
-                    "reset"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
+                  "path": ["ENSEK", "reset"],
+                  "host": ["{{baseUrl}}"],
                   "query": [],
                   "variable": []
                 },
@@ -324,7 +289,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "cf3c60c5-f51f-481d-8451-4d479b8e33d6",
+                "id": "c23cd809-82eb-4b8c-bd16-df1f3bf65d47",
                 "type": "text/javascript",
                 "exec": [
                   "// Validate response status code \npm.test(\"[POST]::/ENSEK/reset - Response status code is 200\", function () {\n    pm.expect(pm.response.code).to.equal(200);\n});\n",
@@ -338,7 +303,7 @@
           }
         },
         {
-          "id": "3be1b67a-435e-4001-94a7-a8a6e78e85b9",
+          "id": "5a70f8c5-16dc-43a1-87ca-ac356b6b43ce",
           "name": "get energy",
           "request": {
             "name": "get energy",
@@ -347,13 +312,8 @@
               "type": "text/plain"
             },
             "url": {
-              "path": [
-                "ENSEK",
-                "energy"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
+              "path": ["ENSEK", "energy"],
+              "host": ["{{baseUrl}}"],
               "query": [],
               "variable": []
             },
@@ -372,17 +332,12 @@
           },
           "response": [
             {
-              "id": "3a3d8beb-757c-4113-bfcf-1a62989a3f26",
+              "id": "1efdcb91-67cc-484b-a8d8-643066c52cf5",
               "name": "Success",
               "originalRequest": {
                 "url": {
-                  "path": [
-                    "ENSEK",
-                    "energy"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
+                  "path": ["ENSEK", "energy"],
+                  "host": ["{{baseUrl}}"],
                   "query": [],
                   "variable": []
                 },
@@ -409,7 +364,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "1d70aa0c-ebec-49af-836c-44d94c0b8446",
+                "id": "bc0cd72b-61fc-4e21-bcbe-7942697ef6b5",
                 "type": "text/javascript",
                 "exec": [
                   "// Validate response status code \npm.test(\"[GET]::/ENSEK/energy - Response status code is 200\", function () {\n    pm.expect(pm.response.code).to.equal(200);\n});\n",
@@ -426,7 +381,7 @@
           }
         },
         {
-          "id": "6b7fee2f-e955-4b12-8ff9-fabb8610d0a2",
+          "id": "a88334ce-bc49-430a-adc7-9a3ab172580c",
           "name": "put buy",
           "request": {
             "name": "put buy",
@@ -435,15 +390,8 @@
               "type": "text/plain"
             },
             "url": {
-              "path": [
-                "ENSEK",
-                "buy",
-                ":id",
-                ":quantity"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
+              "path": ["ENSEK", "buy", ":id", ":quantity"],
+              "host": ["{{baseUrl}}"],
               "query": [],
               "variable": [
                 {
@@ -483,19 +431,12 @@
           },
           "response": [
             {
-              "id": "9fd7d589-7d2e-40aa-8775-a90e033bed7a",
+              "id": "2f3d6df7-c698-4ecd-a32b-2219ec67f8b9",
               "name": "Success",
               "originalRequest": {
                 "url": {
-                  "path": [
-                    "ENSEK",
-                    "buy",
-                    ":id",
-                    ":quantity"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
+                  "path": ["ENSEK", "buy", ":id", ":quantity"],
+                  "host": ["{{baseUrl}}"],
                   "query": [],
                   "variable": []
                 },
@@ -518,19 +459,12 @@
               "cookie": []
             },
             {
-              "id": "26dc1604-f39d-4341-ad73-86ee48e2fb04",
+              "id": "9ace75de-945d-4e42-8888-f80de54cd707",
               "name": "Bad Request",
               "originalRequest": {
                 "url": {
-                  "path": [
-                    "ENSEK",
-                    "buy",
-                    ":id",
-                    ":quantity"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
+                  "path": ["ENSEK", "buy", ":id", ":quantity"],
+                  "host": ["{{baseUrl}}"],
                   "query": [],
                   "variable": []
                 },
@@ -557,15 +491,11 @@
             {
               "listen": "test",
               "script": {
-                "id": "0b6a991d-c225-45d9-b41a-3c15146f98df",
+                "id": "e56bd38a-3653-4098-8d16-3eb9d36f7763",
                 "type": "text/javascript",
                 "exec": [
                   "// Validate response status code \npm.test(\"[PUT]::/ENSEK/buy/:id/:quantity - Response status code is 200\", function () {\n    pm.expect(pm.response.code).to.equal(200);\n});\n",
-                  "// Validate response time \npm.test(\"[PUT]::/ENSEK/buy/:id/:quantity - Response time is less than 2000ms\", function () {\n    pm.expect(pm.response.responseTime).to.be.below(2000);\n});\n",
-                  "// Set response object as internal variable\nlet jsonData = {};\ntry {jsonData = pm.response.json();}catch(e){}\n",
-                  "// Set property value as variable\nconst _resMessage = jsonData?.message;\n",
-                  "// Response body should have \"message\"\npm.test(\"[PUT]::/ENSEK/buy/:id/:quantity - Content check if 'message' exists\", function() {\n   pm.expect(_resMessage !== undefined).to.be.true;\n});\n",
-                  "// Response body should have value \"You have purchased 100 kWh at a cost of 47.0 there are 4222 units remaining\" for \"message\"\nif (_resMessage !== undefined) {\npm.test(\"[PUT]::/ENSEK/buy/:id/:quantity - Content check if value for 'message' matches 'You have purchased 100 kWh at a cost of 47.0 there are 4222 units remaining'\", function() {\n  pm.expect(_resMessage).to.eql(\"You have purchased 100 kWh at a cost of 47.0 there are 4222 units remaining\");\n})};\n"
+                  "// Validate response time \npm.test(\"[PUT]::/ENSEK/buy/:id/:quantity - Response time is less than 2000ms\", function () {\n    pm.expect(pm.response.responseTime).to.be.below(2000);\n});\n"
                 ]
               }
             }
@@ -575,7 +505,7 @@
           }
         },
         {
-          "id": "36917073-8d19-4529-ab0c-d914a93ac3b6",
+          "id": "f32138a8-ab10-4e1a-90e9-4ac7957aacaf",
           "name": "get orders",
           "request": {
             "name": "get orders",
@@ -584,13 +514,8 @@
               "type": "text/plain"
             },
             "url": {
-              "path": [
-                "ENSEK",
-                "orders"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
+              "path": ["ENSEK", "orders"],
+              "host": ["{{baseUrl}}"],
               "query": [],
               "variable": []
             },
@@ -609,17 +534,12 @@
           },
           "response": [
             {
-              "id": "8c9b4f88-934b-4c73-8cc7-c0fbd9e6a36b",
+              "id": "fe5613fa-089b-4f2f-a18e-91c41168fbad",
               "name": "Success",
               "originalRequest": {
                 "url": {
-                  "path": [
-                    "ENSEK",
-                    "orders"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
+                  "path": ["ENSEK", "orders"],
+                  "host": ["{{baseUrl}}"],
                   "query": [],
                   "variable": []
                 },
@@ -646,7 +566,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "85aa8b2b-dcc5-45aa-9350-447ed0b01cf4",
+                "id": "e7c0e59c-3e30-44b6-bfe9-89f460958872",
                 "type": "text/javascript",
                 "exec": [
                   "// Validate response status code \npm.test(\"[GET]::/ENSEK/orders - Response status code is 200\", function () {\n    pm.expect(pm.response.code).to.equal(200);\n});\n",
@@ -660,7 +580,7 @@
           }
         },
         {
-          "id": "9e4a4627-5d6d-437a-bff4-933f795bbf67",
+          "id": "9ca31343-0736-40f6-83f8-01145e09f306",
           "name": "delete orders",
           "request": {
             "name": "delete orders",
@@ -668,14 +588,8 @@
               "type": "text/plain"
             },
             "url": {
-              "path": [
-                "ENSEK",
-                "orders",
-                ":orderId"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
+              "path": ["ENSEK", "orders", ":orderId"],
+              "host": ["{{baseUrl}}"],
               "query": [],
               "variable": [
                 {
@@ -685,7 +599,7 @@
                     "type": "text/plain"
                   },
                   "type": "any",
-                  "value": "voluptate irure Excepteur minim",
+                  "value": "voluptate eiusmod sint Excepteur",
                   "key": "orderId"
                 }
               ]
@@ -705,18 +619,12 @@
           },
           "response": [
             {
-              "id": "3182b49c-0457-4aa3-85f3-8d64ed700ba5",
+              "id": "4844afff-d048-42e5-b6ea-fc96f20870ce",
               "name": "Success",
               "originalRequest": {
                 "url": {
-                  "path": [
-                    "ENSEK",
-                    "orders",
-                    ":orderId"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
+                  "path": ["ENSEK", "orders", ":orderId"],
+                  "host": ["{{baseUrl}}"],
                   "query": [],
                   "variable": []
                 },
@@ -743,7 +651,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "dacd4949-3b7a-44c2-8562-d44f58103518",
+                "id": "9457746f-cef3-481f-ba90-6be2041baeca",
                 "type": "text/javascript",
                 "exec": [
                   "// Validate response status code \npm.test(\"[DELETE]::/ENSEK/orders/:orderId - Response status code is 200\", function () {\n    pm.expect(pm.response.code).to.equal(200);\n});\n",
@@ -757,7 +665,7 @@
           }
         },
         {
-          "id": "4f7549b2-eb7d-4987-9221-f4d030c7ec89",
+          "id": "7e1bd44b-3ab5-4190-baf4-4d60c1811068",
           "name": "put orders",
           "request": {
             "name": "put orders",
@@ -765,14 +673,8 @@
               "type": "text/plain"
             },
             "url": {
-              "path": [
-                "ENSEK",
-                "orders",
-                ":orderId"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
+              "path": ["ENSEK", "orders", ":orderId"],
+              "host": ["{{baseUrl}}"],
               "query": [],
               "variable": [
                 {
@@ -782,7 +684,7 @@
                     "type": "text/plain"
                   },
                   "type": "any",
-                  "value": "voluptate irure Excepteur minim",
+                  "value": "voluptate eiusmod sint Excepteur",
                   "key": "orderId"
                 }
               ]
@@ -796,7 +698,7 @@
             "method": "PUT",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": \"\",\n  \"quantity\": 0,\n  \"energy_id\": -47914978\n}",
+              "raw": "{\n  \"id\": \"\",\n  \"quantity\": 0,\n  \"energy_id\": -23454735\n}",
               "options": {
                 "raw": {
                   "headerFamily": "json",
@@ -817,18 +719,12 @@
           },
           "response": [
             {
-              "id": "14f9e1ab-fc8a-4436-9fe1-a11d773321aa",
+              "id": "78584790-a9bd-4fb0-a228-9049c09db652",
               "name": "Success",
               "originalRequest": {
                 "url": {
-                  "path": [
-                    "ENSEK",
-                    "orders",
-                    ":orderId"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
+                  "path": ["ENSEK", "orders", ":orderId"],
+                  "host": ["{{baseUrl}}"],
                   "query": [],
                   "variable": []
                 },
@@ -849,7 +745,7 @@
                 "method": "PUT",
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n  \"id\": \"\",\n  \"quantity\": 0,\n  \"energy_id\": -47914978\n}",
+                  "raw": "{\n  \"id\": \"\",\n  \"quantity\": 0,\n  \"energy_id\": -23454735\n}",
                   "options": {
                     "raw": {
                       "headerFamily": "json",
@@ -868,7 +764,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "cef5f94d-80ae-42ce-b9b0-da3a00475676",
+                "id": "f0ab5999-8990-4490-8686-8b365bbc3ee4",
                 "type": "text/javascript",
                 "exec": [
                   "// Validate response status code \npm.test(\"[PUT]::/ENSEK/orders/:orderId - Response status code is 200\", function () {\n    pm.expect(pm.response.code).to.equal(200);\n});\n",
@@ -882,7 +778,7 @@
           }
         },
         {
-          "id": "e47da4ff-6b96-4f3d-9ac7-0fcb59b4a487",
+          "id": "5ebe4226-cd3e-4957-8d6e-f3c9be697a43",
           "name": "get orders",
           "request": {
             "name": "get orders",
@@ -891,14 +787,8 @@
               "type": "text/plain"
             },
             "url": {
-              "path": [
-                "ENSEK",
-                "orders",
-                ":orderId"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
+              "path": ["ENSEK", "orders", ":orderId"],
+              "host": ["{{baseUrl}}"],
               "query": [],
               "variable": [
                 {
@@ -908,7 +798,7 @@
                     "type": "text/plain"
                   },
                   "type": "any",
-                  "value": "voluptate irure Excepteur minim",
+                  "value": "voluptate eiusmod sint Excepteur",
                   "key": "orderId"
                 }
               ]
@@ -928,18 +818,12 @@
           },
           "response": [
             {
-              "id": "671446d2-7340-4892-9da8-3a24d5c43f06",
+              "id": "f2090cdb-6942-4fa3-bbcd-68916d0a81ab",
               "name": "Success",
               "originalRequest": {
                 "url": {
-                  "path": [
-                    "ENSEK",
-                    "orders",
-                    ":orderId"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
+                  "path": ["ENSEK", "orders", ":orderId"],
+                  "host": ["{{baseUrl}}"],
                   "query": [],
                   "variable": []
                 },
@@ -966,7 +850,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "22fba3f2-b4bf-4ccb-9a99-49e61d173df2",
+                "id": "3c0a5253-922e-4fea-ae0e-5f6b0b112e92",
                 "type": "text/javascript",
                 "exec": [
                   "// Validate response status code \npm.test(\"[GET]::/ENSEK/orders/:orderId - Response status code is 200\", function () {\n    pm.expect(pm.response.code).to.equal(200);\n});\n",
@@ -983,15 +867,15 @@
       "event": []
     },
     {
-      "id": "d7645eb4-049f-4215-9acc-39c7a34b6084",
+      "id": "563ddd5f-55a0-4322-9b07-c0e091069bcb",
       "name": "Variation Tests",
       "item": [
         {
-          "id": "99052cfd-8565-4f7f-9fc8-664ed11ca2f3",
+          "id": "caa1da80-a97b-4b03-9e40-b857bd7867d1",
           "name": "ENSEK Variations",
           "item": [
             {
-              "id": "947087d2-ff7c-4d2b-bff2-b5a39e4a0e95",
+              "id": "0f251c21-f561-48f4-b206-b424fdfaf99b",
               "name": "put buy[200: Buy gas]",
               "request": {
                 "name": "put buy[200: Buy gas]",
@@ -1000,15 +884,8 @@
                   "type": "text/plain"
                 },
                 "url": {
-                  "path": [
-                    "ENSEK",
-                    "buy",
-                    ":id",
-                    ":quantity"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
+                  "path": ["ENSEK", "buy", ":id", ":quantity"],
+                  "host": ["{{baseUrl}}"],
                   "query": [],
                   "variable": [
                     {
@@ -1048,19 +925,12 @@
               },
               "response": [
                 {
-                  "id": "344ca9e7-7c0c-40c0-93d3-38d100c5b499",
+                  "id": "d3da7480-2a88-4178-afa3-10fe58e43ff0",
                   "name": "Success",
                   "originalRequest": {
                     "url": {
-                      "path": [
-                        "ENSEK",
-                        "buy",
-                        ":id",
-                        ":quantity"
-                      ],
-                      "host": [
-                        "{{baseUrl}}"
-                      ],
+                      "path": ["ENSEK", "buy", ":id", ":quantity"],
+                      "host": ["{{baseUrl}}"],
                       "query": [],
                       "variable": []
                     },
@@ -1083,19 +953,12 @@
                   "cookie": []
                 },
                 {
-                  "id": "7806f3a5-6dd5-4e65-853a-41e78805f860",
+                  "id": "e45b4a2e-36d0-4c46-91ee-332accba3ea3",
                   "name": "Bad Request",
                   "originalRequest": {
                     "url": {
-                      "path": [
-                        "ENSEK",
-                        "buy",
-                        ":id",
-                        ":quantity"
-                      ],
-                      "host": [
-                        "{{baseUrl}}"
-                      ],
+                      "path": ["ENSEK", "buy", ":id", ":quantity"],
+                      "host": ["{{baseUrl}}"],
                       "query": [],
                       "variable": []
                     },
@@ -1122,14 +985,10 @@
                 {
                   "listen": "test",
                   "script": {
-                    "id": "3512a5f9-d95f-4cdc-ad3e-63e824c375c0",
+                    "id": "da14b899-d442-47c4-a602-44df039971dc",
                     "type": "text/javascript",
                     "exec": [
-                      "// Validate response status code \npm.test(\"[PUT]::/ENSEK/buy/:id/:quantity - Response status code is 200\", function () {\n    pm.expect(pm.response.code).to.equal(200);\n});\n",
-                      "// Set response object as internal variable\nlet jsonData = {};\ntry {jsonData = pm.response.json();}catch(e){}\n",
-                      "// Set property value as variable\nconst _resMessage = jsonData?.message;\n",
-                      "// Response body should have \"message\"\npm.test(\"[PUT]::/ENSEK/buy/:id/:quantity - Content check if 'message' exists\", function() {\n   pm.expect(_resMessage !== undefined).to.be.true;\n});\n",
-                      "// Response body should have value \"You have purchased 2900 m³ at a cost of 34.0 there are 100 units remaining.\" for \"message\"\nif (_resMessage !== undefined) {\npm.test(\"[PUT]::/ENSEK/buy/:id/:quantity - Content check if value for 'message' matches 'You have purchased 2900 m³ at a cost of 34.0 there are 100 units remaining.'\", function() {\n  pm.expect(_resMessage).to.eql(\"You have purchased 2900 m³ at a cost of 34.0 there are 100 units remaining.\");\n})};\n"
+                      "// Validate response status code \npm.test(\"[PUT]::/ENSEK/buy/:id/:quantity - Response status code is 200\", function () {\n    pm.expect(pm.response.code).to.equal(200);\n});\n"
                     ]
                   }
                 }
@@ -1139,7 +998,7 @@
               }
             },
             {
-              "id": "b7d7e0d6-2915-480d-a8df-7b5c8f7a20e2",
+              "id": "8b9949e1-36f3-4b36-91e4-b0a09d5587b4",
               "name": "put buy[200: Buy nuclear]",
               "request": {
                 "name": "put buy[200: Buy nuclear]",
@@ -1148,15 +1007,8 @@
                   "type": "text/plain"
                 },
                 "url": {
-                  "path": [
-                    "ENSEK",
-                    "buy",
-                    ":id",
-                    ":quantity"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
+                  "path": ["ENSEK", "buy", ":id", ":quantity"],
+                  "host": ["{{baseUrl}}"],
                   "query": [],
                   "variable": [
                     {
@@ -1196,19 +1048,12 @@
               },
               "response": [
                 {
-                  "id": "66be9c75-be78-474b-a3b7-7ef4a9c401ef",
+                  "id": "6190ffd9-2d30-4e54-b52a-8f5553b9ad3a",
                   "name": "Success",
                   "originalRequest": {
                     "url": {
-                      "path": [
-                        "ENSEK",
-                        "buy",
-                        ":id",
-                        ":quantity"
-                      ],
-                      "host": [
-                        "{{baseUrl}}"
-                      ],
+                      "path": ["ENSEK", "buy", ":id", ":quantity"],
+                      "host": ["{{baseUrl}}"],
                       "query": [],
                       "variable": []
                     },
@@ -1231,19 +1076,12 @@
                   "cookie": []
                 },
                 {
-                  "id": "93c20ccd-ad15-4d74-8877-7151c8b93215",
+                  "id": "63e00c41-7515-4afc-b6d6-5a3c318cc535",
                   "name": "Bad Request",
                   "originalRequest": {
                     "url": {
-                      "path": [
-                        "ENSEK",
-                        "buy",
-                        ":id",
-                        ":quantity"
-                      ],
-                      "host": [
-                        "{{baseUrl}}"
-                      ],
+                      "path": ["ENSEK", "buy", ":id", ":quantity"],
+                      "host": ["{{baseUrl}}"],
                       "query": [],
                       "variable": []
                     },
@@ -1270,7 +1108,7 @@
                 {
                   "listen": "test",
                   "script": {
-                    "id": "4b024443-f9ef-47e4-850b-78c1dee4aefa",
+                    "id": "5fc557aa-f663-4740-91bf-65df03119cee",
                     "type": "text/javascript",
                     "exec": [
                       "// Validate response status code \npm.test(\"[PUT]::/ENSEK/buy/:id/:quantity - Response status code is 200\", function () {\n    pm.expect(pm.response.code).to.equal(200);\n});\n",
@@ -1287,7 +1125,7 @@
               }
             },
             {
-              "id": "c20b5664-46c0-4b4b-952b-3ee183ce790e",
+              "id": "b779e788-ebf6-45a8-8628-ef1b97b38226",
               "name": "put buy[200: Buy oil]",
               "request": {
                 "name": "put buy[200: Buy oil]",
@@ -1296,15 +1134,8 @@
                   "type": "text/plain"
                 },
                 "url": {
-                  "path": [
-                    "ENSEK",
-                    "buy",
-                    ":id",
-                    ":quantity"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
+                  "path": ["ENSEK", "buy", ":id", ":quantity"],
+                  "host": ["{{baseUrl}}"],
                   "query": [],
                   "variable": [
                     {
@@ -1344,19 +1175,12 @@
               },
               "response": [
                 {
-                  "id": "ce7d1e44-0df7-4730-92b9-fcbdaf67663b",
+                  "id": "f6bd3c93-9458-4133-ad06-c53dc9ccbaa6",
                   "name": "Success",
                   "originalRequest": {
                     "url": {
-                      "path": [
-                        "ENSEK",
-                        "buy",
-                        ":id",
-                        ":quantity"
-                      ],
-                      "host": [
-                        "{{baseUrl}}"
-                      ],
+                      "path": ["ENSEK", "buy", ":id", ":quantity"],
+                      "host": ["{{baseUrl}}"],
                       "query": [],
                       "variable": []
                     },
@@ -1379,19 +1203,12 @@
                   "cookie": []
                 },
                 {
-                  "id": "76ace658-7b22-43ca-89ae-f9899e5ef03e",
+                  "id": "31045e29-c300-48a5-89c9-4655f1b71ae9",
                   "name": "Bad Request",
                   "originalRequest": {
                     "url": {
-                      "path": [
-                        "ENSEK",
-                        "buy",
-                        ":id",
-                        ":quantity"
-                      ],
-                      "host": [
-                        "{{baseUrl}}"
-                      ],
+                      "path": ["ENSEK", "buy", ":id", ":quantity"],
+                      "host": ["{{baseUrl}}"],
                       "query": [],
                       "variable": []
                     },
@@ -1418,14 +1235,296 @@
                 {
                   "listen": "test",
                   "script": {
-                    "id": "2c48c610-099d-4187-8293-c85c7941b941",
+                    "id": "a2e2819d-8ede-4692-ba4f-dbe64faa76aa",
                     "type": "text/javascript",
                     "exec": [
-                      "// Validate response status code \npm.test(\"[PUT]::/ENSEK/buy/:id/:quantity - Response status code is 200\", function () {\n    pm.expect(pm.response.code).to.equal(200);\n});\n",
-                      "// Set response object as internal variable\nlet jsonData = {};\ntry {jsonData = pm.response.json();}catch(e){}\n",
-                      "// Set property value as variable\nconst _resMessage = jsonData?.message;\n",
-                      "// Response body should have \"message\"\npm.test(\"[PUT]::/ENSEK/buy/:id/:quantity - Content check if 'message' exists\", function() {\n   pm.expect(_resMessage !== undefined).to.be.true;\n});\n",
-                      "// Response body should have value \"You have purchased 100 Litres at a cost of 60.0 there are -80 units remaining. Your orderid is .*\" for \"message\"\nif (_resMessage !== undefined) {\npm.test(\"[PUT]::/ENSEK/buy/:id/:quantity - Content check if value for 'message' matches 'You have purchased 100 Litres at a cost of 60.0 there are -80 units remaining. Your orderid is .*'\", function() {\n  pm.expect(_resMessage).to.eql(\"You have purchased 100 Litres at a cost of 60.0 there are -80 units remaining. Your orderid is .*\");\n})};\n"
+                      "// Validate response status code \npm.test(\"[PUT]::/ENSEK/buy/:id/:quantity - Response status code is 200\", function () {\n    pm.expect(pm.response.code).to.equal(200);\n});\n"
+                    ]
+                  }
+                }
+              ],
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              }
+            },
+            {
+              "id": "eb8f6e43-b8cb-4165-a922-d963314a779b",
+              "name": "post login[401: Unauthorized login]",
+              "request": {
+                "name": "post login[401: Unauthorized login]",
+                "description": {
+                  "content": "Use to obtain an Bearer access token.",
+                  "type": "text/plain"
+                },
+                "url": {
+                  "path": ["ENSEK", "login"],
+                  "host": ["{{baseUrl}}"],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"password\": \"invalid_pass\",\n    \"username\": \"invalid_user\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "type": "any",
+                      "value": "{{apiKey}}",
+                      "key": "token"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "b703c9d1-8134-4642-af04-6f15efc6125e",
+                  "name": "Success",
+                  "originalRequest": {
+                    "url": {
+                      "path": ["ENSEK", "login"],
+                      "host": ["{{baseUrl}}"],
+                      "query": [],
+                      "variable": []
+                    },
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": {
+                          "content": "Added as a part of security scheme: apikey",
+                          "type": "text/plain"
+                        },
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "method": "POST",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"password\": \"testing\",\n  \"username\": \"test\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "header": [],
+                  "cookie": []
+                },
+                {
+                  "id": "a06eb934-d194-4c7a-acce-6dde885d7bb5",
+                  "name": "Bad Request",
+                  "originalRequest": {
+                    "url": {
+                      "path": ["ENSEK", "login"],
+                      "host": ["{{baseUrl}}"],
+                      "query": [],
+                      "variable": []
+                    },
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": {
+                          "content": "Added as a part of security scheme: apikey",
+                          "type": "text/plain"
+                        },
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "method": "POST",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"password\": \"testing\",\n  \"username\": \"test\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "Bad Request",
+                  "code": 400,
+                  "header": [],
+                  "cookie": []
+                },
+                {
+                  "id": "0506b9dd-aa5c-4616-a417-519c28859e48",
+                  "name": "Unauthorized",
+                  "originalRequest": {
+                    "url": {
+                      "path": ["ENSEK", "login"],
+                      "host": ["{{baseUrl}}"],
+                      "query": [],
+                      "variable": []
+                    },
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": {
+                          "content": "Added as a part of security scheme: apikey",
+                          "type": "text/plain"
+                        },
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "method": "POST",
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"password\": \"testing\",\n  \"username\": \"test\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    }
+                  },
+                  "status": "Unauthorized",
+                  "code": 401,
+                  "header": [],
+                  "cookie": []
+                }
+              ],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "bdbebc7f-1282-4ce4-925e-c5f2219a89fd",
+                    "type": "text/javascript",
+                    "exec": [
+                      "// Validate response status code \npm.test(\"[POST]::/ENSEK/login - Response status code is 401\", function () {\n    pm.expect(pm.response.code).to.equal(401);\n});\n"
+                    ]
+                  }
+                }
+              ],
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              }
+            },
+            {
+              "id": "8d1a2ae3-c874-49bc-9e75-87932ba1da74",
+              "name": "post reset[401: Unauthorized access with invalid token]",
+              "request": {
+                "name": "post reset[401: Unauthorized access with invalid token]",
+                "description": {
+                  "content": "Use to reset the test data back to its initial state",
+                  "type": "text/plain"
+                },
+                "url": {
+                  "path": ["ENSEK", "reset"],
+                  "host": ["{{baseUrl}}"],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {},
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "type": "any",
+                      "value": "invalidtoken",
+                      "key": "token"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "9a197ea6-6a0f-4a34-9c75-cf08b88ffadf",
+                  "name": "Success",
+                  "originalRequest": {
+                    "url": {
+                      "path": ["ENSEK", "reset"],
+                      "host": ["{{baseUrl}}"],
+                      "query": [],
+                      "variable": []
+                    },
+                    "header": [
+                      {
+                        "description": {
+                          "content": "Added as a part of security scheme: apikey",
+                          "type": "text/plain"
+                        },
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "method": "POST",
+                    "body": {}
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "header": [],
+                  "cookie": []
+                },
+                {
+                  "id": "7b361904-8abf-42b0-8671-973342e2482c",
+                  "name": "Unauthorized",
+                  "originalRequest": {
+                    "url": {
+                      "path": ["ENSEK", "reset"],
+                      "host": ["{{baseUrl}}"],
+                      "query": [],
+                      "variable": []
+                    },
+                    "header": [
+                      {
+                        "description": {
+                          "content": "Added as a part of security scheme: apikey",
+                          "type": "text/plain"
+                        },
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "method": "POST",
+                    "body": {}
+                  },
+                  "status": "Unauthorized",
+                  "code": 401,
+                  "header": [],
+                  "cookie": []
+                }
+              ],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "ecedaeed-ec5b-40d4-9413-0203cd62fba8",
+                    "type": "text/javascript",
+                    "exec": [
+                      "// Validate response status code \npm.test(\"[POST]::/ENSEK/reset - Response status code is 401\", function () {\n    pm.expect(pm.response.code).to.equal(401);\n});\n"
                     ]
                   }
                 }
@@ -1470,7 +1569,7 @@
     }
   ],
   "info": {
-    "_postman_id": "0ee4fb38-81e8-41dd-9957-e79f2142df92",
+    "_postman_id": "bd44a294-601a-43f1-925b-ec0262062539",
     "name": "ENSEK Test API Application",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "description": {
